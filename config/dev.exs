@@ -70,8 +70,14 @@ config :my_table, MyTableWeb.Endpoint,
 # Enable dev routes for dashboard and mailbox
 config :my_table, dev_routes: true
 
-# Do not include metadata nor timestamps in development logs
-config :logger, :default_formatter, format: "[$level] $message\n"
+# config/dev.exs
+config :logger, :console,
+  level: :debug,
+  format: "[$level] $message\n"
+
+# See LiveTable internal operations
+config :live_table,
+  debug: true
 
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
