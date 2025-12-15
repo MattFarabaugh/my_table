@@ -61,12 +61,6 @@ defmodule MyTableWeb.TasksLive do
     ~H"""
     <Layouts.app flash={@flash}>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Layouts.page_header
-          number={2}
-          title="Tasks"
-          rows="1K rows"
-          description="Boolean filters for completed, urgent, archived, pending, and overdue tasks."
-        />
 
         <.live_table
           fields={fields()}
